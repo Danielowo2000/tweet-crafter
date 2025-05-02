@@ -16,4 +16,4 @@ class Config:
         LOGS_DIR = APP_HOME / "logs"
         AGENT_LOGS_DIR = LOGS_DIR / "agents"
 
-    MODEL = Model.LLAMA_3
+    MODEL = Model.GPT_4o

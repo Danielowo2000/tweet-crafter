@@ -1,6 +1,5 @@
 from crewai import Crew, Process
 from dotenv import load_dotenv
-
 from tweetcrafter.agents import (
     editor_agent,
     researcher_agent,
@@ -22,6 +21,7 @@ Config.Path.AGENT_LOGS_DIR.mkdir(exist_ok=True, parents=True)
 Config.Path.OUTPUT_DIR.mkdir(exist_ok=True, parents=True)
 
 llm = create_model(Config.MODEL)
+
 
 scraper = scraper_agent(llm)
 researcher = researcher_agent(llm)

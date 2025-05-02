@@ -1,14 +1,12 @@
 from textwrap import dedent
-
 from crewai import Agent
 from crewai_tools import ScrapeWebsiteTool
-
 from tweetcrafter.callbacks import step_callback
 from tweetcrafter.config import Config
 from tweetcrafter.tools import read_tweets, save_tweet
 
-scrape_tool = ScrapeWebsiteTool()
 
+scrape_tool = ScrapeWebsiteTool()
 
 def scraper_agent(llm) -> Agent:
     return Agent(
